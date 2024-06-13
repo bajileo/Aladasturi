@@ -139,7 +139,7 @@ def login():
             return redirect("/")
         else:
             flash("Incorrect password, try again :(", category="danger")
-    return render_template("Login.html", form = form)
+    return render_template("login.html", form = form)
 
 used_SAMSUNG_discount = False
 used_APPLE_discount = False
