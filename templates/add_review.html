@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block bodyaddreview %}
+
+<div class="container" >
+    <form method="post" style="text-align: center; display: flex; flex-direction: column; width: 30%;" class="form-addreview" > 
+
+        {{ form.hidden_tag() }}
+        
+        {{ form.reviewc.label }}
+        &nbsp
+        {{ form.reviewc(class="form-content") }}
+        <br>
+        
+        &nbsp
+        {{ form.submit}}
+
+    </form>
+</div>
+
+
+{% endblock %}

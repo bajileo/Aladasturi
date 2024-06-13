@@ -1,0 +1,133 @@
+{% extends "layout.html" %}
+{% block headindex %}
+        <title>DAVALEBA 8</title>
+        <style>
+            h3{
+                text-align: right;
+            }
+            h4{
+                text-align: left;
+            }
+        </style>
+{% endblock %}
+{% block bodyindex%}
+        <div class="container-lg text-center">
+            <h2 style="color: indigo;">shop</h2>
+            <h1 style="color: indigo;">Aladasturi</h1>
+            <div class="row">
+                <div class="col"><button type="button" class="btn" style="background-color:skyblue; color:whitesmoke"><a>Phones</a></button></div>
+                <div class="col"><button type="button" class="btn" style="background-color: blue; color:whitesmoke"><a>Laptops</a></button></div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="accordion" id="accordionExample1">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed text-bg-info" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                              Samsung 
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              {% for phone in samsung: %}
+                              {% set img = phone["link"] %}
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <img src={{img}} class="img-fluid" alt="samsung phone">
+                                        <h3>{{ phone["price"] }}$</h3>
+                                        <h4>{{ phone["name"] }}</h4>                                        
+                                    </li>
+                                  </ul>
+                              {% endfor %}
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed text-bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              Apple
+                            </button>
+                          </h2>
+                          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+
+                              {% for phone in apple: %}
+                              {% set img = phone["link"] %}
+
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <img src={{img}} class="img-fluid" alt="Apple nagavi phone">
+                                        <h3>{{ phone["price"] }}$</h3>
+                                        <h4>{{ phone["name"] }}</h4>                                        
+                                    </li>
+                                  </ul>
+                                  
+                              {% endfor %}
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="accordion" id="accordionExample2">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed text-bg-info" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne1" aria-expanded="false" aria-controls="collapseOne">
+                              Lenovo
+                            </button>
+                          </h2>
+                          <div id="collapseOne1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+
+                              {% for laptop in lenovo: %}
+                              {% set img = laptop["link"] %}
+                      
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <img src={{img}} class="img-fluid" alt="lenovo laptop">
+                                        <h3>{{ laptop["price"] }}$</h3>
+                                        <h4>{{ laptop["name"] }}</h4>                                         
+                                    </li>
+                                  </ul>   
+
+                              {% endfor %} 
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed text-bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo1" aria-expanded="false" aria-controls="collapseTwo">
+                              Asus
+                            </button>
+                          </h2>
+                          <div id="collapseTwo1" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+
+                              {% for laptop in asus: %}
+                              {% set img = laptop["link"] %}
+
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <img src={{img}} class="img-fluid" alt="Asus laptop">
+                                        <h3>{{ laptop["price"] }}$</h3>
+                                        <h4>{{ laptop["name"] }}</h4>                                         
+                                    </li>
+                                  </ul>    
+                                  
+                              {% endfor %}
+                                  
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </ul>                
+            </div>
+            </div>
+            <hr>
+            <a href="http://127.0.0.1:5000/location" class="link link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Our location</a>
+            &nbsp
+            <a href="http://127.0.0.1:5000/reviews" class="link link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Reviews</a>
+          </div>
+{% endblock %}

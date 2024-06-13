@@ -1,0 +1,48 @@
+/*Nikoloz Bajelidze*/
+
+@font-face {
+    font-family: 'Rocher';
+    src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+  }
+  
+  .cust {
+    font-family: 'Rocher';
+    text-align: center;
+    font-size: 25px;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h1 {
+    margin: 0;
+  }
+  
+  @font-palette-values --Grays {
+    font-family: Rocher;
+    base-palette: 9;
+  }
+  
+  @font-palette-values --Purples {
+    font-family: Rocher;
+    base-palette: 6;
+  }
+  
+  @font-palette-values --Mint {
+    font-family: Rocher;
+    base-palette: 7;
+  }
+  
+  .grays {
+    font-palette: --Grays;
+  }
+  
+  .purples {
+    font-palette: --Purples;
+  }
+  
+  .mint {
+    font-palette: --Mint;
+  }

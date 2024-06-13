@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block bodyregister %}
+
+
+<div class="container">
+    <form method="post" style="text-align: center; display: flex; flex-direction: column; width: 30%;" class="form-register" > 
+
+            {{ form.hidden_tag() }}
+
+            {{ form.nickname.label }}
+            &nbsp
+            {{ form.nickname }}
+
+            <br>
+
+            {{ form.password.label }}
+            &nbsp
+            {{ form.password }}
+
+            <br>
+
+            {{ form.rpassword.label }}
+            &nbsp
+            {{ form.rpassword }}
+
+            &nbsp
+            {{ form.register}}
+    </form>
+
+</div>
+
+{% endblock %}

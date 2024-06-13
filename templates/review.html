@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block headreview %}
+    <title>Reviews</title>
+    <link rel="stylesheet" href="/static/styler.css">
+{% endblock %}
+
+{% block bodyreview %}
+    <h1 class="purples cust" >Customer Reviews</h1>
+
+    {% for person, review in customer_reviews.items() %}
+
+        <h1 class="mint cust">{{ person }}: {{ review }}</h1>
+
+    {% endfor %}
+
+    <a href="/" class="button cust">Go Back</a>
+{% endblock %}

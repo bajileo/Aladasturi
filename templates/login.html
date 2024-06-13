@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block bodylogin %}
+
+<div class="container" >
+    <form method="post" style="text-align: center; display: flex; flex-direction: column; width: 30%;" class="form-login" > 
+
+        {{ form.hidden_tag() }}
+        
+        {{ form.nickname.label }}
+        &nbsp
+        {{ form.nickname(class="form-content") }}
+        
+        <br>
+
+        {{ form.password.label }}
+        &nbsp
+        {{ form.password(class="form-content") }}    
+
+        &nbsp
+        {{ form.login}}
+
+    </form>
+</div>
+
+
+{% endblock %}
